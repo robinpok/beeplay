@@ -1,0 +1,26 @@
+{
+    "applications": {
+        "Beeplay": {
+            "applicationId": "uqP6NkjgqzJfmQb4TqqLdpXpauO5TO5PUXii0ydg", 
+            "masterKey": "oNTAwbTQOVD1htlx2SGdkpIP2vqDZ1fKDgVGtHJN"
+        }, 
+        "Beeplay-dev": {
+            "applicationId": "8CjiZVMZVIkGYKKQOSUi0lhLdYp0hJC6YBQLxL69", 
+            "masterKey": "EhVKMahmJJLBVweHIwdsSLkL6SqT9lRqGvW5sWhv"
+        }, 
+        "Beeplay-test": {
+            "applicationId": "6usE5O1ka3XKvNsQdWGqCDcRShg8xqp3qP4RhMmZ", 
+            "masterKey": "4cZXrEMsviGHv2cispHiLw6DgVm4hnLSpiqI7YsI"
+        }, 
+        "_default": {
+            "link": "Beeplay-dev"
+        }, 
+        "testapp": {
+            "applicationId": "iQR46663Pg4h6IGPOpgyKsCtwavq6tu0ZggmdAAt", 
+            "masterKey": "E53YIMQgPe9nTgJD33tyyEp6aBvezZC1KigU4oZt"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.12"
+    }
+}

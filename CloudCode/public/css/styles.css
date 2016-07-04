@@ -1,0 +1,95 @@
+/************************************************************************
+ *
+ * Common
+ *
+ ************************************************************************/
+
+.beeplay-loader
+{
+	margin-top: 130px;
+	display: -webkit-box; display: -moz-box; display: box;
+    -webkit-box-orient: vertical;-moz-box-orient: vertical;box-orient: vertical;
+	-webkit-box-align: center;-moz-box-align: center;flex-align: center;
+	-webkit-box-pack: center;-moz-box-pack: center;flex-pack: center;
+}
+
+body.modal-open
+{
+	margin-right: 0;
+}
+
+body.modal-open > .navbar
+{
+	margin-right: 0;
+}
+
+.nav .breadcrumb {
+    margin: 0 7px;
+}
+@media (min-width: 768px) {
+    .nav .breadcrumb {
+        float: left;
+        margin: 7px 10px;
+    }
+}
+
+/************************************************************************
+ *
+ * Login screen
+ *
+ ************************************************************************/
+
+.beeplay-input
+{
+	margin-bottom:5px;
+}
+
+.beeplay-login-panel
+{
+  padding-top: 100px;
+}
+
+/************************************************************************
+ *
+ * Beeps
+ *
+ ************************************************************************/
+
+.beeplay-beeps-body
+{
+	padding-top: 80px;
+}
+
+.beeplay-center-y
+{
+	vertical-align: middle;
+}
+
+.beep-invisible > div > div > .beeps-list-element-price
+{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.beep-invisible > div > div > .beeps-list-element-title
+{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.beep-invisible > div > div > .beeps-list-element-address
+{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+/************************************************************************
+ *
+ * Beeps List
+ *
+ ************************************************************************/
+
+ .beeps-list-element-button
+ {
+ 	margin-right: 10px;
+ }

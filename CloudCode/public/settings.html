@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="esoft" />
+	<title>Beeplay settings</title>
+	<!-- Bootstrap core CSS -->
+	<link href="external/bootstrap/css/bootstrap.css" rel="stylesheet" />
+	<!-- Custom styles for this template -->
+	<link href="css/styles.css" rel="stylesheet" />
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="../../assets/js/html5shiv.js"></script>
+		<script src="../../assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body class="beeplay-beeps-body">
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="beepslist.html">Beeplay</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<ul class="breadcrumb list-inline">
+						<li><a href="beepslist.html">Gestión de Beeps</a></li>
+						<li class="active">Configuración</li>
+					</ul>
+				</ul>
+			</div>
+		</nav>
+		<div class="container">
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Configuración</h3>
+				</div>
+				<div class="panel-body">
+					<div id="settingsAlert" hidden>
+					</div>
+					<div class="input-group beeplay-input">
+						<span class="input-group-addon">Cantidad mínima de dinero para poder cobrar</span>
+						<input id="minimumMoneyBalanceToReclaim" type="number" min="0" class="form-control">
+						<span class="input-group-addon">€</span>
+					</div>
+					<div class="input-group beeplay-input">
+						<span class="input-group-addon">Cantidad mínima de puntos para poder cobrar</span>
+						<input id="minimumPointsBalanceToReclaim" type="number" min="0" class="form-control">
+						<span class="input-group-addon">puntos</span>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Mensaje de bienvenida</h3>
+						</div>
+						<div class="panel-body">
+							<div class="input-group beeplay-input">
+								<span class="input-group-addon">Asunto</span>
+								<input id="welcomeMessageSubject" type="text" class="form-control">
+							</div>
+							<div class="beeplay-input">
+								<textarea id="welcomeMessageBody" class="form-control" rows="8"></textarea>
+							</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Mensaje de timeout</h3>
+						</div>
+						<div class="panel-body">
+							<div class="input-group beeplay-input">
+								<span class="input-group-addon">Asunto</span>
+								<input id="timeoutMessageSubject" type="text" class="form-control">
+							</div>
+							<div class="beeplay-input">
+								<textarea id="timeoutMessageBody" class="form-control" rows="8"></textarea>
+							</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Mensaje de inactividad</h3>
+						</div>
+						<div class="panel-body">
+							<div class="input-group beeplay-input">
+								<span class="input-group-addon">Asunto</span>
+								<input id="inactivityMessageSubject" type="text" class="form-control">
+							</div>
+							<div class="beeplay-input">
+								<textarea id="inactivityMessageBody" class="form-control" rows="8"></textarea>
+							</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Mensaje de aceptación del informe</h3>
+						</div>
+						<div class="panel-body">
+							<div class="input-group beeplay-input">
+								<span class="input-group-addon">Asunto</span>
+								<input id="acceptanceMessageSubject" type="text" class="form-control">
+							</div>
+							<div class="beeplay-input">
+								<textarea id="acceptanceMessageBody" class="form-control" rows="8"></textarea>
+							</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Mensaje de rechazo del informe</h3>
+						</div>
+						<div class="panel-body">
+							<div class="input-group beeplay-input">
+								<span class="input-group-addon">Asunto</span>
+								<input id="rejectionMessageSubject" type="text" class="form-control">
+							</div>
+							<div class="beeplay-input">
+								<textarea id="rejectionMessageBody" class="form-control" rows="8"></textarea>
+							</div>
+							<div class="pull-right">
+								<button id="saveSettingsButton" class="btn btn-primary pull-right" data-loading-text="Actualizando...">
+									Actualizar
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="external/jquery/jquery.js"></script>
+		<script src="external/bootstrap/js/bootstrap.js"></script>
+		<script src="external/parse/parse.js"></script>
+
+		<!-- Front-end scripts -->
+		<script src="scripts/common/backend.js"></script>
+		<script src="scripts/common/errorUI.js"></script>
+		<script src="scripts/common/loading.js"></script>
+		<script src="scripts/common/confirmUI.js"></script>
+		<script src="scripts/common/navigation.js"></script>
+		<script src="scripts/settings/settingsCloud.js"></script>
+		<script src="scripts/settings/settingsUI.js"></script>
+	</body>
+	</html>

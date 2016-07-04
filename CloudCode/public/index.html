@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="beeplay" />
+	<title>Beeplay</title>
+	<!-- Bootstrap core CSS -->
+	<link href="external/bootstrap/css/bootstrap.css" rel="stylesheet" />
+	<!-- Custom styles for this template -->
+	<link href="css/styles.css" rel="stylesheet" />
+</head>
+<body>
+	<div class="container">
+
+		<!-- Login form -->
+		<div class="beeplay-login-panel">
+			<div class="col-md-4 col-md-offset-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3>Beeplay: Web Admin</h3>
+					</div>
+					<div class="panel-body">
+						<form id="form_login" method="post">
+							<div id="loginAlert" hidden>
+							</div>
+							<input id="emailInput" type="text" class="form-control beeplay-input" placeholder="Dirección de e-mail" autofocus/>
+							<input id="pwdInput"  type="password" class="form-control beeplay-input" placeholder="Contraseña"/>
+							<div class="row">
+								<div class="col-md-12 text-center">
+									<button id="loginButton" type="submit" class="btn btn-primary" data-loading-text="Entrando...">
+										Entrar
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="external/jquery/jquery.js"></script>
+		<script src="external/bootstrap/js/bootstrap.js"></script>
+		<script src="external/parse/parse.js"></script>
+
+		<!-- Front-end scripts -->
+		<script src="scripts/common/backend.js"></script>
+		<script src="scripts/common/errorUI.js"></script>
+		<script src="scripts/common/loading.js"></script>
+		<script src="scripts/common/navigation.js"></script>
+		<script src="scripts/login/loginCloud.js"></script>
+		<script src="scripts/login/loginUI.js"></script>
+	</body>
+	</html>

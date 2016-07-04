@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="esoft" />
+	<title>Beeplay dashboard</title>
+	<!-- Bootstrap core CSS -->
+	<link href="external/bootstrap/css/bootstrap.css" rel="stylesheet" />
+	<!-- Custom styles for this template -->
+	<link href="css/styles.css" rel="stylesheet" />
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="../../assets/js/html5shiv.js"></script>
+		<script src="../../assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body class="beeplay-beeps-body">
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="beepslist.html">Beeplay</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<ul class="breadcrumb list-inline">
+						<li class="active">Gestión de Beeps</li>
+					</ul>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a id="newBeepButton" href="#"><span class="glyphicon glyphicon-plus-sign icons-padding"></span> Nuevo Beep</a></li>
+					<li><a id="settingsButton" href="#"><span class="glyphicon glyphicon-cog icons-padding"></span> Configuración</a></li>
+					<li><a id="logOutButton" href="#"><span class="glyphicon glyphicon-off icons-padding"></span> Cerrar sesión</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="container">
+			<!-- Beeps with feedback -->
+			<div class="panel panel-danger">
+				<div class="panel-heading">
+					<h3 class="panel-title">Beeps con informes pendientes de revisar <span id="beepsWithFeedbackCount" class="badge pull-right">0</span></h3>
+				</div>
+				<div class="panel-body">
+					<ul id="beepsWithFeedbackList" class="list-group">
+
+					</ul>
+				</div>
+			</div>
+
+			<!-- Beeps without users -->
+			<div class="panel panel-warning">
+				<div class="panel-heading">
+					<h3 class="panel-title">Beeps sin usuarios inscritos <span id="beepsWithoutUsersBadge" class="badge pull-right">0</span></h3>
+				</div>
+				<div class="panel-body">
+					<ul id="beepsWithoutUsersList" class="list-group">
+
+					</ul>
+				</div>
+			</div>
+
+			<!-- Beeps with users -->
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">Beeps con usuarios inscritos <span id="beepsWithUsersBadge" class="badge pull-right">0</span></h3>
+				</div>
+				<div class="panel-body">
+					<ul id="beepsWithUsersList" class="list-group">
+
+					</ul>
+				</div>
+			</div>
+
+			<!-- Completed beeps -->
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					<h3 class="panel-title">Beeps completados <span id="completedBeepsBadge" class="badge pull-right">0</span></h3>
+				</div>
+				<div class="panel-body">
+					<ul id="completedBeepsList" class="list-group">
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="external/jquery/jquery.js"></script>
+		<script src="external/bootstrap/js/bootstrap.js"></script>
+		<script src="external/parse/parse.js"></script>
+
+		<!-- Front-end scripts -->
+		<script src="scripts/common/backend.js"></script>
+		<script src="scripts/common/errorUI.js"></script>
+		<script src="scripts/common/loading.js"></script>
+		<script src="scripts/common/confirmUI.js"></script>
+		<script src="scripts/common/navigation.js"></script>
+		<script src="scripts/beepslist/beepsListCloud.js"></script>
+		<script src="scripts/beepslist/beepsListUI.js"></script>
+	</body>
+</html>

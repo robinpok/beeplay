@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="esoft" />
+	<title>Beeplay</title>
+	<!-- Bootstrap core CSS -->
+	<link href="external/bootstrap/css/bootstrap.css" rel="stylesheet" />
+	<!-- Custom styles for this template -->
+	<link href="css/styles.css" rel="stylesheet" />
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="../../assets/js/html5shiv.js"></script>
+		<script src="../../assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body class="beeplay-beeps-body">
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="index.html">Beeplay</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<ul class="breadcrumb list-inline">
+						<li><a href="beepslist.html">Gestión de Beeps</a></li>
+						<li class="active">Detalles del Beep</li>
+					</ul>
+				</ul>
+			</div>
+		</nav>
+
+		<form name="beep">
+			<input type="hidden" name="beepId">
+		</form>
+
+		<div class="container">
+			<!-- Beep details -->
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">Detalles del Beep</h3>
+				</div>
+				<div class="panel-body">
+					<div id="detailsAlert" hidden>
+					</div>
+					<label>Información básica</label>
+					<div class="input-group beeplay-input">
+						<span class="input-group-addon">Nombre de la empresa</span>
+						<input id="companyName" type="text" class="form-control">
+					</div>
+					<div class="input-group beeplay-input">
+						<span class="input-group-addon">Título del Beep</span>
+						<input id="title" type="text" class="form-control">
+					</div>
+					<div class="input-group beeplay-input">
+						<span class="input-group-addon">Precio del Beep</span>
+						<input id="price" type="number" min="0" class="form-control">
+						<span class="input-group-addon">€</span>
+					</div>
+					<div class="input-group beeplay-input">
+						<span class="input-group-addon">Puntuación del Beep</span>
+						<input id="points" type="number" min="0" class="form-control">
+						<span class="input-group-addon">puntos</span>
+					</div>
+					<label>Localización</label>
+					<div class="input-group beeplay-input">
+						<span class="input-group-addon">Dirección</span>
+						<input id="address" type="text" class="form-control"/>
+						<span class="input-group-btn">
+							<button id="searchAddressButton" class="btn btn-primary" data-loading-text="Buscando...">
+								Buscar
+							</button>
+						</span>
+					</div>
+					<div id="addressAlert" hidden>
+					</div>
+					<div class="input-group beeplay-input">
+						<span class="input-group-addon">Linea 1</span>
+						<input id="addressLine1" type="text" class="form-control">
+					</div>
+					<div class="input-group beeplay-input">
+						<span class="input-group-addon">Linea 2</span>
+						<input id="addressLine2" type="text" class="form-control">
+					</div>
+					<div class="input-group beeplay-input">
+						<span class="input-group-addon">Latitud</span>
+						<input id="latitude" type="number" min="0" class="form-control">
+					</div>
+					<div class="input-group beeplay-input">
+						<span class="input-group-addon">Longitud</span>
+						<input id="longitude" type="number" min="0" class="form-control">
+					</div>
+					<div class="beeplay-input">
+						<label for="description" >Descripción del Beep</label>
+						<textarea id="description" class="form-control" rows="5"></textarea>
+					</div>
+					<label>Especifiaciones de la respuesta</label>
+					<div class="input-group beeplay-input">
+						<span class="input-group-addon">Requiere geolocalizaciÛn</span>
+						<div class="form-control">
+							<label class="radio-inline">
+							  <input type="radio" name="geolocationRequiredRadio" id="geolocationAllow" value="true"> Sí
+							</label>
+							<label class="radio-inline">
+							  <input type="radio" name="geolocationRequiredRadio" id="geolocationDeny" value="false" checked> No
+							</label>
+						</div>
+					</div>					
+					<div class="input-group beeplay-input">
+						<span class="input-group-addon">Requiere foto</span>
+						<div class="form-control">
+							<label class="radio-inline">
+							  <input type="radio" name="photoRequiredRadio" id="photoAllow" value="true"> Sí
+							</label>
+							<label class="radio-inline">
+							  <input type="radio" name="photoRequiredRadio" id="photoDeny" value="false" checked> No
+							</label>
+						</div>
+					</div>
+					<div id="cameraRollRadioContainer" class="input-group beeplay-input hide">
+						<span class="input-group-addon">Permitir fotos del carrete</span>
+						<div class="form-control">
+							<label class="radio-inline">
+							  <input type="radio" name="cameraRollRadio" id="cameraRollAllow" value="true"> Sí
+							</label>
+							<label class="radio-inline">
+							  <input type="radio" name="cameraRollRadio" id="cameraRollDeny" value="false" checked> No
+							</label>
+						</div>
+					</div>
+					<div class="input-group beeplay-input">
+						<span class="input-group-addon">E-mail para respuestas</span>
+						<input id="responseEmail" type="email" class="form-control">
+					</div>
+					<label>Inscripciones</label>
+					<div class="input-group beeplay-input">
+						<span class="input-group-addon">Número máximo de participantes</span>
+						<input id="maximumNumberOfParticipants" type="number" class="form-control" min="1">
+					</div>
+					<div class="input-group beeplay-input">
+						<span class="input-group-addon">Tiempo máximo de inscripción (en horas)</span>
+						<input id="beepSubscriptionTimeout" type="number" class="form-control" min="1">
+					</div>
+					<label>Visibilidad</label>
+					<div class="input-group beeplay-input">
+						<span class="input-group-addon">Mostrar como disponible al usuario</span>
+						<div class="form-control">
+							<label class="radio-inline">
+							  <input type="radio" name="visibilityRadio" id="visibilityShow" value="true"> Sí
+							</label>
+							<label class="radio-inline">
+							  <input type="radio" name="visibilityRadio" id="visibilityHide" value="false" checked> No
+							</label>
+						</div>
+					</div>
+					<div class="pull-right">
+						<button id="saveBeepButton" class="btn btn-primary pull-right" data-loading-text="Publicando...">
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- Registered users -->
+			<div id="subscriptions" class="panel panel-success">
+				<div class="panel-heading">
+					<h3 class="panel-title">Usuarios inscritos <span id="subscriptionsBadge" class="badge pull-right">0</span></h3>
+				</div>
+				<div class="panel-body">
+					<ul id="subscriptionsList" class="list-group">
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- Bootstrap core JavaScript
+			================================================== -->
+			<!-- Placed at the end of the document so the pages load faster -->
+			<script src="external/jquery/jquery.js"></script>
+			<script src="external/bootstrap/js/bootstrap.js"></script>
+			<script src="external/parse/parse.js"></script>
+			<script src="external/mandrill/mandrill.js"></script>
+
+			<script src="scripts/common/backend.js"></script>
+			<script src="scripts/common/errorUI.js"></script>
+			<script src="scripts/common/loading.js"></script>
+			<script src="scripts/common/navigation.js"></script>
+			<script src="scripts/beepdetails/beepDetailsCloud.js"></script>
+			<script src="scripts/beepdetails/beepDetailsUI.js"></script>
+		</body>
+		</html>
